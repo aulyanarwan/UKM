@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>UKM Lokal - Penawaran Produk</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-woox-travel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+
+<body>
+
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <ul class="nav">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="deals.html" class="active">Produk UKM</a></li>
+                        <li><a href="reservation.html">Hubungi Kami</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Penawaran Mingguan Kami</h4>
+          <h2>Harga Menarik & Produk Berkualitas</h2>
+          <div class="border-button"><a href="about.html">Selengkapnya</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="search-form" name="gs" method="submit" role="search" action="#">
+            <div class="row">
+              <div class="col-lg-2">
+                <h4>Sortir Produk Berdasarkan:</h4>
+              </div>
+              <div class="col-lg-4">
+                  <fieldset>
+                      <select name="Location" class="form-select" aria-label="Default select example" id="chooseLocation" onChange="this.form.click()">
+                          <option selected>Kategori Produk</option>
+                          <option value="Kerajinan">Kerajinan Tangan</option>
+                          <option value="OlehOleh">Oleh-oleh khas Daerah</option>
+                          <option value="Pakaian">Fashion lokal</option>
+                          <option value="Makanan">Footwear Lokal</option>
+                      </select>
+                  </fieldset>
+              </div>
+              <div class="col-lg-4">
+                  <fieldset>
+                      <select name="Price" class="form-select" aria-label="Default select example" id="choosePrice" onChange="this.form.click()">
+                          <option selected>Kisaran Harga</option>
+                          <option value="100">Rp100.000 - Rp250.000</option>
+                          <option value="250">Rp250.000 - Rp500.000</option>
+                          <option value="500">Rp500.000 - Rp1.000.000</option>
+                          <option value="1000">Rp1.000.000 - Rp2.500.000</option>
+                          <option value="2500+">Rp2.500.000+</option>
+                      </select>
+                  </fieldset>
+              </div>
+              <div class="col-lg-2">                        
+                  <fieldset>
+                      <button class="border-button">Cari Produk</button>
+                  </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="amazing-deals">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading text-center">
+            <p>Dapatkan berbagai produk UKM terbaik dari seluruh daerah.</p>
+          </div>
+        </div>
+
+        <!DOCTYPE html>
+        <html lang="id">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Kategori Produk UKM</title>
+          <link rel="stylesheet" href="styles.css">
+          <script>
+            function showProducts(category) {
+              const businesses = {
+                footwear: [
+                  'Pengusaha 1: Sepatu Lokal Bandung - Rp250.000',
+                  'Pengusaha 2: Sneaker Yogyakarta - Rp350.000',
+                  'Pengusaha 3: Sandal Kulit Bali - Rp150.000'
+                ],
+                'oleh-oleh': [
+                  'Pengusaha 1: Oleh-oleh Malang - Rp50.000',
+                  'Pengusaha 2: Snack Khas Bali - Rp75.000',
+                  'Pengusaha 3: Souvenir Jogja - Rp100.000'
+                ],
+                kerajinan: [
+                  'Pengusaha 1: Kerajinan Kayu Jepara - Rp300.000',
+                  'Pengusaha 2: Anyaman Bambu Lombok - Rp200.000',
+                  'Pengusaha 3: Batik Solo - Rp500.000'
+                ],
+                fashion: [
+                  'Pengusaha 1: Baju Adat Toraja - Rp400.000',
+                  'Pengusaha 2: Kain Tenun Nusa Tenggara - Rp600.000',
+                  'Pengusaha 3: Jaket Kulit Garut - Rp700.000'
+                ]
+              };
+        
+              const businessList = document.getElementById('business-list');
+              businessList.style.display = 'block';
+              businessList.innerHTML = '<h4>Pengusaha dalam Kategori: ' + category + '</h4><ul>' +
+                businesses[category].map(item => '<li>' + item + '</li>').join('') +
+                '</ul>';
+            }
+          </script>
+        </head>
+        <body>
+          <div class="container">
+            <!-- Item 1: Footwear Lokal -->
+            <div class="col-lg-6 col-sm-6">
+              <div class="item">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="image">
+                      <img src="assets/images/deals-01.jpg" alt="Footwear Lokal">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 align-self-center">
+                    <div class="content">
+                      <h4>Footwear Lokal</h4>
+                      <p>Langkah mantap dengan sepatu lokal berkualitas, nyaman di setiap langkahmu.</p>
+                      <div class="main-button">
+                        <a href="#" onclick="showProducts('footwear')">Jelajahi Kategori Produk Ini</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Item 2: Oleh-oleh Khas Daerah -->
+            <div class="col-lg-6 col-sm-6">
+              <div class="item">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="image">
+                      <img src="assets/images/deals-02.jpg" alt="Oleh-oleh Khas Daerah">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 align-self-center">
+                    <div class="content">
+                      <h4>Oleh-oleh Khas Daerah</h4>
+                      <p>Bawa pulang kenangan dari tempat yang kamu kunjungi, sebagai tanda cinta dari daerahmu.</p>
+                      <div class="main-button">
+                        <a href="#" onclick="showProducts('oleh-oleh')">Jelajahi Kategori Produk Ini</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Item 3: Kerajinan Tangan -->
+            <div class="col-lg-6 col-sm-6">
+              <div class="item">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="image">
+                      <img src="assets/images/deals-03.jpg" alt="Kerajinan Tangan">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 align-self-center">
+                    <div class="content">
+                      <h4>Kerajinan Tangan</h4>
+                      <p>Karya seni lokal yang unik, harga untuk kamu yang istimewa.</p>
+                      <div class="main-button">
+                        <a href="#" onclick="showProducts('kerajinan')">Jelajahi Kategori Produk Ini</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Item 4: Fashion Lokal -->
+            <div class="col-lg-6 col-sm-6">
+              <div class="item">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="image">
+                      <img src="assets/images/deals-04.jpg" alt="Fashion Lokal">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 align-self-center">
+                    <div class="content">
+                      <h4>Fashion Lokal</h4>
+                      <p>Fashion lokal yang mengikuti tren, tetap membawa ciri khas budaya kita.</p>
+                      <div class="main-button">
+                        <a href="#" onclick="showProducts('fashion')">Jelajahi Kategori Produk Ini</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Container untuk Menampilkan Daftar Pengusaha -->
+            <div id="business-list" class="col-lg-12" style="display: none; margin-top: 20px;">
+              <!-- Daftar pengusaha akan muncul di sini -->
+            </div>
+          </div>
+        </body>
+        </html>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Hak Cipta &copy; 2036 <a href="#">UKM Lokal</a> Semua Hak Dilindungi. <br>

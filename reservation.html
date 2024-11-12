@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>UKM Support Page</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-woox-travel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <ul class="nav">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                        <li><a href="deals.html">Produk</a></li>
+                        <li><a href="reservation.html" class="active">Hubungi kami</a></li>
+                    </ul>   
+                    <a class='menu-trigger'><span>Menu</span></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <div class="second-page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Dukung Produk Lokal di Sini</h4>
+          <h2>Eksplorasi Produk UKM</h2>
+          <p>Temukan beragam produk unik dari pengrajin lokal, mulai dari kerajinan tangan, pakaian, hingga makanan khas daerah yang menonjolkan budaya setempat.</p>
+          <div class="main-button"><a href="about.html">Pelajari Lebih Lanjut</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="more-info reservation-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6">
+          <div class="info-item">
+            <i class="fa fa-phone"></i>
+            <h4>Hubungi Kami</h4>
+            <a href="https://wa.me/6282242440928" target="_blank">Hubungi Kami di WhatsApp</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="info-item">
+            <i class="fa fa-envelope"></i>
+            <h4>Email Kami</h4>
+            <a href="mailto:nahdas751@gmail.com">nahdas751@gmail.com</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="info-item">
+              <i class="fa fa-instagram"></i>
+              <h4>Ikuti Kami di Media Sosial</h4>
+              <a href="https://www.instagram.com/_ukm_karyabersamaa" target="_blank">Instagram</a><br>
+              <a href="https://www.facebook.com/profile.php?id=61568900180176&mibextid=ZbWKwL" target="_blank">Facebook</a><br>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="reservation-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form id="reservation-form" name="gs" onsubmit="return addOrder()" role="form">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4>Pesan Produk <em>UKM</em> Melalui Form Ini</h4>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <label for="Name" class="form-label">Nama Anda</label>
+                                <input type="text" id="Name" class="Name" placeholder="Nama Lengkap" required>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <label for="Number" class="form-label">Nomor Telepon Anda</label>
+                                <input type="text" id="Number" class="Number" placeholder="Nomor Telepon" required>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <label for="chooseProduct" class="form-label">Pilih Kategori Produk</label>
+                                <select id="chooseProduct" class="form-select">
+                                    <option value="Kerajinan Tangan" selected>Kerajinan Tangan</option>
+                                    <option value="Oleh-Oleh">Oleh-Oleh khas Daerah</option>
+                                    <option value="Pakaian">Fashion Lokal</option>
+                                    <option value="Makanan">Makanan</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <label for="Quantity" class="form-label">Jumlah Produk</label>
+                                <input type="number" id="Quantity" class="Quantity" placeholder="Jumlah Produk" min="1" required>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <button type="button" onclick="addProduct()" class="main-button">Tambah Produk</button>
+                                <button type="submit" class="main-button">Pesan Sekarang</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+                <div id="productList" style="margin-top: 20px;"></div> <!-- Untuk menampilkan daftar produk sementara -->
+                <div id="output" style="margin-top: 20px;"></div> <!-- Untuk menampilkan data pesanan -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tambahkan elemen canvas untuk grafik -->
+<div class="container">
+    <h4>Grafik Pendaftaran Pedagang Berdasarkan Produk Dibulan JULI</h4>
+    <canvas id="merchantChart" width="400" height="200"></canvas>
+</div>
+
+<!-- Tambahkan Chart.js ke halaman -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Data untuk pesanan dan produk sementara
+    var orders = [];
+    var currentProducts = [];
+
+    function addProduct() {
+        var product = document.getElementById('chooseProduct').value;
+        var quantity = document.getElementById('Quantity').value;
+
+        currentProducts.push({ product: product, quantity: quantity });
+        displayCurrentProducts();
+    }
+
+    function displayCurrentProducts() {
+        var productList = document.getElementById('productList');
+        productList.innerHTML = "<h4>Produk dalam Pesanan:</h4>";
+
+        currentProducts.forEach(function(prod, index) {
+            productList.innerHTML += `
+                <div>
+                    <p><strong>Produk ${index + 1}</strong></p>
+                    <p>Kategori: ${prod.product}</p>
+                    <p>Jumlah: ${prod.quantity}</p>
+                    <hr>
+                </div>
+            `;
+        });
+    }
+
+    function addOrder() {
+        var name = document.getElementById('Name').value;
+        var number = document.getElementById('Number').value;
+
+        if (currentProducts.length === 0) {
+            alert("Tambahkan setidaknya satu produk ke dalam pesanan.");
+            return false;
+        }
+
+        orders.push({ name: name, number: number, products: currentProducts.slice() });
+        currentProducts = [];
+        displayOrders();
+        document.getElementById('reservation-form').reset();
+        document.getElementById('productList').innerHTML = "";
+
+        return false;
+    }
+
+    function displayOrders() {
+        var output = document.getElementById('output');
+        output.innerHTML = "<h4>Daftar Pesanan:</h4>";
+
+        orders.forEach(function(order, index) {
+            output.innerHTML += `
+                <div id="order-${index}">
+                    <p><strong>Pesanan ${index + 1}</strong></p>
+                    <p>Nama: ${order.name}</p>
+                    <p>Nomor Telepon: ${order.number}</p>
+                    <p><strong>Detail Produk:</strong></p>
+            `;
+
+            order.products.forEach(function(prod, prodIndex) {
+                output.innerHTML += `
+                    <div>
+                        <p>Produk ${prodIndex + 1}: ${prod.product}</p>
+                        <p>Jumlah: ${prod.quantity}</p>
+                    </div>
+                `;
+            });
+
+            output.innerHTML += `
+                    <button onclick="cancelOrder(${index})">Batalkan</button>
+                    <hr>
+                </div>
+            `;
+        });
+    }
+
+    function cancelOrder(index) {
+        orders.splice(index, 1);
+        displayOrders();
+    }
+
+    // Grafik untuk menampilkan jumlah pedagang terdaftar dan jumlah pembeli
+    var merchantData = {
+        labels: ["Oleh-Oleh Khas Daerah", "Fashion Lokal", "Kerajinan Tangan/Sepatu"],
+        datasets: [
+            {
+                label: 'Jumlah Pedagang Terdaftar',
+                data: [11, 5, 3], // Jumlah pedagang terdaftar per kategori (contoh)
+                borderColor: '#4CAF50', // Warna hijau untuk pedagang
+                backgroundColor: 'rgba(76, 175, 80, 0.2)', // Warna latar belakang hijau transparan
+                borderWidth: 2,
+                pointStyle: 'circle',
+                pointRadius: 6,
+                pointHoverRadius: 8
+            },
+            {
+                label: 'Jumlah Pembeli',
+                data: [20, 15, 8], // Jumlah pembeli per kategori produk (contoh)
+                borderColor: '#FF6347', // Warna merah untuk pembeli
+                backgroundColor: 'rgba(255, 99, 132, 0.2)', // Warna latar belakang merah transparan
+                borderWidth: 2,
+                pointStyle: 'circle',
+                pointRadius: 6,
+                pointHoverRadius: 8
+            }
+        ]
+    };
+
+    var options = {
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Kategori Produk'
+                }
+            },
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Jumlah'
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top'
+            }
+        }
+    };
+
+    var ctx = document.getElementById('merchantChart').getContext('2d');
+    var merchantChart = new Chart(ctx, {
+        type: 'line',
+        data: merchantData,
+        options: options
+    });
+
+    function updateChartData(newData) {
+        merchantChart.data.datasets[0].data = newData;
+        merchantChart.update();
+    }
+</script>
+    
+  </footer>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
